@@ -1,0 +1,36 @@
+//
+// Grid
+// --------------------------
+
+
+// Row
+.grid {
+	margin-right: -#{$grid-margin * 0.5};
+	margin-left: -#{$grid-margin * 0.5};
+	@extend %clearfix;
+}
+
+
+// Columns
+@include make-grid-columns();
+
+
+// Medium grid
+@include make-grid(md);
+
+
+// Small grid
+@media (max-width: $screen-sm-min) {
+	@include make-grid(sm);
+}
+
+// Extra small grid
+@media (max-width: $screen-xs-min) {
+	@include make-grid(xs);
+	&.col-xs-clear {}
+}
+
+// Large grid
+@media (min-width: $screen-lg-min) {
+	@include make-grid(lg);
+}

@@ -1,0 +1,70 @@
+//== Prefix
+//
+
+$prefix : 'ib-';
+
+
+
+//== Color
+//
+
+$color-link: #003595;
+$color-link-hover: #002b79;
+
+$color-gray-base: #000;
+$color-gray-darker: #111;
+$color-gray-dark: #333;
+$color-gray: #666;
+$color-gray-light: #888;
+$color-gray-lighter: #eee;
+
+$color-primary: #3d7dca;
+$color-success: #56b826;
+$color-warning: #f08b29;
+$color-danger: #f03c29;
+$color-info: #19bb9e;
+$color-dead: #7e7e78;
+
+$color-primary-blur: mix(#fff, $color-primary, 90%);
+$color-success-blur: mix(#fff, $color-success, 90%);
+$color-warning-blur: mix(#fff, $color-warning, 90%);
+$color-danger-blur: mix(#fff, $color-danger, 90%);
+$color-info-blur: mix(#fff, $color-info, 90%);
+$color-dead-blur: mix(#fff, $color-dead, 90%);
+
+$color-text: #333;
+$color-headding: #111;
+
+
+
+//== Screen sizes
+//
+$screen-xs-min: 480px;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+$screen-xs-max: $screen-sm-min - 1;
+$screen-sm-max: $screen-md-min - 1;
+$screen-md-max: $screen-lg-min - 1;
+
+
+
+//== Typography
+//
+
+$typo-size-base: 14px;
+
+$typo-family-sans-serif : "Apple SD Gothic Neo", "Malgun Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$typo-family-serif: Georgia, "Times New Roman", Times, serif;
+$typo-family-code: Menlo, Monaco, Consolas, "Courier New", monospace;
+$typo-family-base: $typo-family-sans-serif;
+
+$typo-line-height: 1.428571429;
+
+
+
+//== Grid
+//
+$grid-columns: 12;
+$grid-margin: 30px;

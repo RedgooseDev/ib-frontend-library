@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>i-builder CSS Library Documentation</title>
+<link rel="stylesheet" href="../dist/css/ibuilder-lib.css">
+<link rel="stylesheet" href="../vendor/highlight.js/styles/monokai-sublime.css">
+<link rel="stylesheet" href="./assets/css/documentation.css">
+</head>
+<body>
+<main>
+	<?php include "side-css.html"; ?>
+
+	<div class="documentation">
+		<!-- Introduce -->
+		<section id="Introduce">
+			<h1>시작하기</h1>
+			<p>
+				이 CSS 라이브러리는 i-builder로 제작하는 사이트를 스타일을 규격화 시키기 위하여 만들어 졌습니다.<br/>
+				이것은 <a href="http://getbootstrap.com/" target="_blank">Bootstrap front-end framework</a>를 참고하여 제작하였습니다.
+			</p>
+			<p>
+				지원하는 브라우저의 최저버전은 ie8입니다. 모든 브라우저가 동일한 형태로 출력하지 않으며 브라우저 버전에 따라 점진적으로 나아지는 형태고 개발하는것으로 목표하고 있습니다.
+			</p>
+
+			<section id="IntroduceDownload">
+				<h1>Download</h1>
+				<p>
+					다음 링크를 통하여 css 라이브러리를 패키징한 파일을 받을 수 있으며 github를 통해 소스를 받아 수정하여 직접 빌드할 수 있습니다.
+				</p>
+				<nav>
+					<a href="#">Download</a>
+					<a href="#">Soucecode in github</a>
+				</nav>
+			</section>
+		</section>
+		<!-- // Introduce -->
+
+
+		<!-- Typography -->
+		<section id="Typography">
+			<h1>Typography</h1>
+			<p>
+				글과 문장에 관한 섹션입니다. 본문, 제목, 글의조합, 목록등을 다룹니다.
+			</p>
+
+			<section id="TypographyHeadding">
+				<h1>Headding</h1>
+				<p>
+					제목에 관한 스타일을 정의합니다.<br/>
+					<code>div.h1 ~ div.h6</code>와 같이 특정 엘리먼트에 클래스를 붙여 사용할 수 있습니다.<br/>
+					headding 엘리먼트 내부에 <code>&lt;small/></code>, <code>&lt;span.small/></code> 엘리먼트를 사용하면 좀 더 작은 사이즈의 글자를 표현할 수 있습니다.
+				</p>
+				<div class="example">
+					<h1>h1. Grace, 얼룩백이황소 <small>eternity</small></h1>
+					<h2>h2. Grace, 얼룩백이황소 <small>eternity</small></h2>
+					<h3>h3. Grace, 얼룩백이황소 <small>eternity</small></h3>
+					<h4>h4. Grace, 얼룩백이황소 <small>eternity</small></h4>
+					<h5>h5. Grace, 얼룩백이황소 <small>eternity</small></h5>
+					<h6>h6. Grace, 얼룩백이황소 <small>eternity</small></h6>
+				</div>
+				<div class="source">
+<pre><code class="html">&lt;h1>h1. Grace, 얼룩백이황소 &lt;small>eternity&lt;/small>&lt;/h1>
+&lt;h2>h2. Grace, 얼룩백이황소 &lt;small>eternity&lt;/small>&lt;/h2>
+&lt;h3>h3. Grace, 얼룩백이황소 &lt;small>eternity&lt;/small>&lt;/h3>
+&lt;h4>h4. Grace, 얼룩백이황소 &lt;small>eternity&lt;/small>&lt;/h4>
+&lt;h5>h5. Grace, 얼룩백이황소 &lt;small>eternity&lt;/small>&lt;/h5>
+&lt;h6>h6. Grace, 얼룩백이황소 &lt;small>eternity&lt;/small>&lt;/h6></code></pre>
+				</div>
+			</section>
+			<section id="TypographyBody">
+				<h1>Body</h1>
+				<div class="example">
+					<p class="text-lead">정지용, &lt;향수></p>
+					<p>
+						넓은 벌 동쪽 끝으로 옛 이야기 지줄대는 실개천이 휘돌아 나가고<br/>
+						얼룩백이 황소가 해설피 금빛 게으른 울음을 우는 곳<br/>
+						그곳이 차마 꿈엔들 잊힐 리야
+					</p>
+				</div>
+			</section>
+			<section id="TypographyAnchor">
+				<h1>Anchor</h1>
+				<div class="example">
+					<a href="#">Link text</a>
+				</div>
+			</section>
+			<section id="TypographyTextalign">
+				<h1>Text Align</h1>
+				<div class="example">
+					<p class="text-left">Left align</p>
+					<p class="text-center">Center align</p>
+					<p class="text-right">Right align</p>
+					<p class="text-justify">Justified text</p>
+					<p class="text-nowrap">No wrap text</p>
+				</div>
+			</section>
+			<section id="TypographyTransform">
+				<h1>Transformation</h1>
+				<div class="example">
+					<p class="text-lowercase">Lowercased text</p>
+					<p class="text-uppercase">Uppercased text</p>
+					<p class="text-capitalize">Capitalized text</p>
+				</div>
+			</section>
+			<section id="TypographyList">
+				<h1>List</h1>
+				<div class="example">
+					<ul>
+						<li>동무란 한낱 괴로운 존재요,</li>
+						<li>
+							우정이란 진정코 위태로운 잔에 떠놓은 물이다.
+							<ol>
+								<li>동무란 한낱 괴로운 존재요,</li>
+								<li>우정이란 진정코 위태로운 잔에 떠놓은 물이다.</li>
+							</ol>
+						</li>
+					</ul>
+					<hr>
+					<ul class="list-unstyled">
+						<li>동무란 한낱 괴로운 존재요,</li>
+						<li>우정이란 진정코 위태로운 잔에 떠놓은 물이다.</li>
+					</ul>
+					<hr>
+					<ul class="list-inline">
+						<li>동무란 한낱 괴로운 존재요,</li>
+						<li>우정이란 진정코 위태로운 잔에 떠놓은 물이다.</li>
+					</ul>
+				</div>
+			</section>
+			<section id="TypographyDescription">
+				<h1>Description</h1>
+				<div class="example">
+					<dl class="text-description">
+						<dt>윤동주, &lt;달을 쏘다></dt>
+						<dd>
+							동무란 한낱 괴로운 존재요,<br/>
+							우정이란 진정코 위태로운 잔에 떠놓은 물이다.
+						</dd>
+					</dl>
+					<dl class="text-description horizontal">
+						<dt>윤동주, &lt;달을 쏘다></dt>
+						<dd>
+							동무란 한낱 괴로운 존재요,<br/>
+							우정이란 진정코 위태로운 잔에 떠놓은 물이다.
+						</dd>
+					</dl>
+					<dl class="text-description horizontal responsive">
+						<dt>윤동주, &lt;달을 쏘다></dt>
+						<dd>
+							동무란 한낱 괴로운 존재요,<br/>
+							우정이란 진정코 위태로운 잔에 떠놓은 물이다.
+						</dd>
+					</dl>
+				</div>
+			</section>
+			<section id="TypographyBlockquotes">
+				<h1>Blockquotes</h1>
+				<div class="example">
+					<blockquote>
+						<p>
+							동무란 한낱 괴로운 존재요,<br/>
+							우정이란 진정코 위태로운 잔에 떠놓은 물이다.
+						</p>
+						<footer>윤동주, &lt;달을 쏘다></footer>
+					</blockquote>
+					<blockquote class="text-right">
+						<p>
+							동무란 한낱 괴로운 존재요,<br/>
+							우정이란 진정코 위태로운 잔에 떠놓은 물이다.
+						</p>
+						<footer>윤동주, &lt;달을 쏘다></footer>
+					</blockquote>
+
+					<blockquote class="color-primary">
+						<p>
+							동무란 한낱 괴로운 존재요,<br/>
+							우정이란 진정코 위태로운 잔에 떠놓은 물이다.
+						</p>
+						<footer>윤동주, &lt;달을 쏘다></footer>
+					</blockquote>
+				</div>
+			</section>
+			<section id="TypographyCode">
+				<h1>Code</h1>
+				<h2>inline</h2>
+				<div class="example">
+					<p>우정이란 <code>&lt;strong></code>진정코<code>&lt;/strong></code> 위태로운 잔에 떠놓은 물이다.</p>
+				</div>
+				<h2>block</h2>
+				<div class="example">
+					<pre>&lt;p>우정이란 &lt;strong>진정코&lt;/strong> 위태로운 잔에 떠놓은 물이다.&lt;/p></pre>
+				</div>
+			</section>
+		</section>
+		<!-- // Typography -->
+
+
+		<!-- Grid -->
+		<section id="Grid">
+			<h1>Grid</h1>
+			<section id="GridIntroduce">
+				<h1>Grid Introduce</h1>
+				<p>...</p>
+				<div class="example">
+					<div class="grid">
+						<div class="col-md-1">.col-md-1</div>
+						<div class="col-md-1">.col-md-1</div>
+						<div class="col-md-1">.col-md-1</div>
+						<div class="col-md-1">.col-md-1</div>
+						<div class="col-md-1">.col-md-1</div>
+						<div class="col-md-1">.col-md-1</div>
+						<div class="col-md-1">.col-md-1</div>
+						<div class="col-md-1">.col-md-1</div>
+						<div class="col-md-1">.col-md-1</div>
+						<div class="col-md-1">.col-md-1</div>
+						<div class="col-md-1">.col-md-1</div>
+						<div class="col-md-1">.col-md-1</div>
+					</div>
+					<hr>
+					<div class="grid">
+						<div class="col-md-3">.col-md-3</div>
+						<div class="col-md-3">.col-md-3</div>
+						<div class="col-md-3">.col-md-3</div>
+						<div class="col-md-3">.col-md-3</div>
+					</div>
+					<hr>
+					<div class="grid">
+						<div class="col-md-6">.col-md-6</div>
+						<div class="col-md-6">.col-md-6</div>
+					</div>
+					<hr>
+					<div class="grid">
+						<div class="col-md-12">.col-md-12</div>
+						<div class="col-md-12">.col-md-12</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="GridResponsive">
+				<h1>Responsive</h1>
+				<div class="example">
+					<div class="grid">
+						<div class="col-md-6 col-sm-3 col-xs-12 col-lg-8">.col-md-6 .col-xs-12xxxxx</div>
+						<div class="col-md-6 col-sm-3 col-xs-12 col-lg-4">.col-md-6 .col-xs-12xxx</div>
+						<div class="col-md-6 col-sm-3 col-xs-12 col-lg-8">.col-md-6 .col-xs-12xxx</div>
+						<div class="col-md-6 col-sm-3 col-xs-12 col-lg-4">.col-md-6 .col-xs-12xxxx</div>
+						<div class="col-md-6 col-sm-3 col-xs-12 col-lg-8">.col-md-6 .col-xs-12xxxx</div>
+						<div class="col-md-6 col-sm-3 col-xs-12 col-lg-4">.col-md-6 .col-xs-12xxxx</div>
+					</div>
+					<hr>
+					<hr>
+					<div class="grid">
+						<div class="col-md-8 col-xs-6">.col-md-8 .col-xs-6</div>
+						<div class="col-md-4 col-xs-6">.col-md-4 .col-xs-6</div>
+					</div>
+				</div>
+				<div class="example">
+					<div class="grid">
+						<div class="col-md-4 col-xs-3">.col-md-3 .col-xs-6</div>
+						<div class="col-md-4 col-xs-3">.col-md-3 .col-xs-6</div>
+						<div class="col-xs-clear"></div>
+						<div class="col-md-4 col-xs-3">.col-md-3 .col-xs-6</div>
+						<div class="col-md-4 col-xs-3">.col-md-3 .col-xs-6</div>
+					</div>
+				</div>
+			</section>
+
+		</section>
+		<!-- // Grid -->
+
+
+		<!-- Table -->
+		<section id="Table">
+			<h1>Table</h1>
+
+			<section id="">
+				<h1>aaa</h1>
+			</section>
+		</section>
+		<!-- // Table -->
+	</div>
+</main>
+
+<script src="../vendor/highlight.js/highlight.pack.js"></script>
+<script>
+hljs.initHighlightingOnLoad();
+hljs.configure({ tabReplace : '  ' });
+</script>
+</body>
+</html>
+
