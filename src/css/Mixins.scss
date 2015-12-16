@@ -1,8 +1,31 @@
+
+//
+// ETC
+// --------------------------
+
 @mixin box-sizing($value) {
 	-webkit-box-sizing: $value;
 	-moz-box-sizing: $value;
 	box-sizing: $value;
 }
+
+
+
+//
+// Typography
+// --------------------------
+
+@mixin box-bg-color($bg-color, $text-color, $padding-size) {
+	background: $bg-color;
+	color: $text-color;
+	padding: $padding-size;
+}
+
+
+
+//
+// Grid
+// --------------------------
 
 @mixin make-grid-columns($i: 1, $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}") {
 	@for $i from (1 + 1) through $grid-columns {
@@ -10,14 +33,11 @@
 	}
 	#{$list} {
 		position: relative;
-		// Prevent columns from collapsing when empty
 		min-height: 1px;
-		// Inner gutter via padding
 		padding-left:  ceil(($grid-margin / 2));
 		padding-right: floor(($grid-margin / 2));
 	}
 }
-
 
 @mixin float-grid-columns($class, $i: 1, $list: ".col-#{$class}-#{$i}") {
 	@for $i from (1 + 1) through $grid-columns {
@@ -67,8 +87,6 @@
 	}
 }
 
-
-
 // Create grid for specific class
 @mixin make-grid($class) {
 	@include float-grid-columns($class);
@@ -76,4 +94,33 @@
 	@include loop-grid-columns($grid-columns, $class, pull);
 	@include loop-grid-columns($grid-columns, $class, push);
 	@include loop-grid-columns($grid-columns, $class, offset);
+}
+
+
+
+//
+// Table
+// --------------------------
+
+@mixin table-row-variant($state, $background) {
+	.table > thead > tr,
+	.table > tbody > tr,
+	.table > tfoot > tr {
+		> td.#{$state},
+		> th.#{$state},
+		&.#{$state} > td,
+		&.#{$state} > th {
+			background-color: $background;
+		}
+	}
+
+	.table-hover > tbody > tr {
+		> td.#{$state}:hover,
+		> th.#{$state}:hover,
+		&.#{$state}:hover > td,
+		&:hover > .#{$state},
+		&.#{$state}:hover > th {
+			background-color: darken($background, 5%);
+		}
+	}
 }

@@ -4,7 +4,8 @@
 
 body, input, textarea, button {
 	font-family: $typo-family-base;
-	font-size: $typo-size-base; color: $color-gray-dark;
+	font-size: $typo-size-base;
+	color: $color-gray-dark;
 	line-height: $typo-line-height;
 }
 
@@ -50,6 +51,57 @@ a {
 }
 
 
+// Color
+
+.text-primary {color: $color-primary;}
+.text-success {color: $color-success;}
+.text-warning {color: $color-warning;}
+.text-danger {color: $color-danger;}
+.text-info {color: $color-info;}
+.text-dead {color: $color-dead;}
+
+
+// Background color
+
+.bg-primary {
+	@include box-bg-color($color-primary, #fff, $margin-basic-horizontal);
+}
+.bg-success {
+	@include box-bg-color($color-success, #fff, $margin-basic-horizontal);
+}
+.bg-warning {
+	@include box-bg-color($color-warning, #fff, $margin-basic-horizontal);
+}
+.bg-danger {
+	@include box-bg-color($color-danger, #fff, $margin-basic-horizontal);
+}
+.bg-info {
+	@include box-bg-color($color-info, #fff, $margin-basic-horizontal);
+}
+.bg-dead {
+	@include box-bg-color($color-dead, #fff, $margin-basic-horizontal);
+}
+
+.bg-primary-blur {
+	@include box-bg-color($color-primary-blur, $color-gray-base, $margin-basic-horizontal);
+}
+.bg-success-blur {
+	@include box-bg-color($color-success-blur, $color-gray-base, $margin-basic-horizontal);
+}
+.bg-warning-blur {
+	@include box-bg-color($color-warning-blur, $color-gray-base, $margin-basic-horizontal);
+}
+.bg-danger-blur {
+	@include box-bg-color($color-danger-blur, $color-gray-base, $margin-basic-horizontal);
+}
+.bg-info-blur {
+	@include box-bg-color($color-info-blur, $color-gray-base, $margin-basic-horizontal);
+}
+.bg-dead-blur {
+	@include box-bg-color($color-dead-blur, $color-gray-base, $margin-basic-horizontal);
+}
+
+
 // Text align
 
 .text-left {text-align: left;}
@@ -57,6 +109,9 @@ a {
 .text-right {text-align: right;}
 .text-justify {text-align: justify;}
 .text-nowrap {white-space: nowrap;}
+.text-top {vertical-align: top;}
+.text-middle {vertical-align: middle;}
+.text-bottom {vertical-align: bottom;}
 
 
 // Transformation
@@ -102,13 +157,13 @@ ul, ol {
 	&.horizontal {
 		> dt {
 			float: left;
-			width: 150px;
+			width: $typo-description-side-width;
 			overflow: hidden;
 			white-space: nowrap;
 			text-overflow: ellipsis;
 		}
 		> dd {
-			margin-left: 165px;
+			margin-left: $typo-description-side-width + $margin-basic-horizontal;
 		}
 		@media (max-width: $screen-xs-max) {
 			&.responsive {
@@ -128,14 +183,14 @@ ul, ol {
 // Blockquote
 
 blockquote {
-	margin: 10px 0;
-	padding: 1px 20px;
+	margin: $margin-basic-horizontal 0;
+	padding: 1px $margin-basic-horizontal;
 	font-size: $typo-size-base * 1.15;
 	border-width: 0 0 0 5px; border-color: #eee; border-style: solid;
 	font-weight: 600;
 	footer, small {
 		display: block;
-		margin: 10px 0;
+		margin: $margin-basic-horizontal 0;
 		font-size: 80%;
 		color: $color-gray-light;
 		&:before { content: '\2014 \00A0'; }

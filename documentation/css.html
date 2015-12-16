@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>i-builder CSS Library Documentation</title>
+<meta name=viewport content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="../dist/css/ibuilder-lib.css">
 <link rel="stylesheet" href="../vendor/highlight.js/styles/monokai-sublime.css">
 <link rel="stylesheet" href="./assets/css/documentation.css">
@@ -85,7 +86,7 @@
 					<a href="#">Link text</a>
 				</div>
 			</section>
-			<section id="TypographyTextalign">
+			<section id="TypographyTextAlign">
 				<h1>Text Align</h1>
 				<div class="example">
 					<p class="text-left">Left align</p>
@@ -241,31 +242,30 @@
 				<h1>Responsive</h1>
 				<div class="example">
 					<div class="grid">
-						<div class="col-md-6 col-sm-3 col-xs-12 col-lg-8">.col-md-6 .col-xs-12xxxxx</div>
-						<div class="col-md-6 col-sm-3 col-xs-12 col-lg-4">.col-md-6 .col-xs-12xxx</div>
-						<div class="col-md-6 col-sm-3 col-xs-12 col-lg-8">.col-md-6 .col-xs-12xxx</div>
-						<div class="col-md-6 col-sm-3 col-xs-12 col-lg-4">.col-md-6 .col-xs-12xxxx</div>
-						<div class="col-md-6 col-sm-3 col-xs-12 col-lg-8">.col-md-6 .col-xs-12xxxx</div>
-						<div class="col-md-6 col-sm-3 col-xs-12 col-lg-4">.col-md-6 .col-xs-12xxxx</div>
+						<div class="col-md-4 col-sm-3 col-xs-12">.col-md-4 .col-sm-3 .col-xs-12</div>
+						<div class="col-md-8 col-sm-3 col-xs-12">.col-md-8 .col-sm-3 .col-xs-12</div>
+						<div class="col-md-4 col-sm-3 col-xs-12">.col-md-4 .col-sm-3 .col-xs-12</div>
+						<div class="col-md-8 col-sm-3 col-xs-12">.col-md-8 .col-sm-3 .col-xs-12</div>
 					</div>
-					<hr>
 					<hr>
 					<div class="grid">
 						<div class="col-md-8 col-xs-6">.col-md-8 .col-xs-6</div>
 						<div class="col-md-4 col-xs-6">.col-md-4 .col-xs-6</div>
 					</div>
 				</div>
+				<p>
+					의도적으로 float을 리셋시키기 위하여 컬럼들 사이에 <code>.clear-{size}</code>의 엘리먼트를 넣어줄 수 있습니다.
+				</p>
 				<div class="example">
 					<div class="grid">
-						<div class="col-md-4 col-xs-3">.col-md-3 .col-xs-6</div>
-						<div class="col-md-4 col-xs-3">.col-md-3 .col-xs-6</div>
-						<div class="col-xs-clear"></div>
-						<div class="col-md-4 col-xs-3">.col-md-3 .col-xs-6</div>
-						<div class="col-md-4 col-xs-3">.col-md-3 .col-xs-6</div>
+						<div class="col-xs-3 col-md-4">.col-xs-3 .col-md-4</div>
+						<div class="col-xs-3 col-md-4">.col-xs-3 .col-md-4</div>
+						<div class="clear-sm"></div>
+						<div class="col-xs-3 col-md-4">.col-xs-3 .col-md-4</div>
+						<div class="col-xs-3 col-md-4">.col-xs-3 .col-md-4</div>
 					</div>
 				</div>
 			</section>
-
 		</section>
 		<!-- // Grid -->
 
@@ -273,12 +273,871 @@
 		<!-- Table -->
 		<section id="Table">
 			<h1>Table</h1>
+			<p>
+				..........
+			</p>
 
-			<section id="">
-				<h1>aaa</h1>
+			<section id="TableBasic">
+				<h1>Basic</h1>
+				<p>...</p>
+				<div class="example">
+					<table class="table">
+						<caption>이름목록</caption>
+						<thead>
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Last Name</th>
+							<th scope="col">First Name</th>
+							<th scope="col">별명</th>
+							<th scope="col">Sex</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>1</td>
+							<td>최</td>
+							<td>유림</td>
+							<td>@bikiyou</td>
+							<td>여성</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>박</td>
+							<td>하늘</td>
+							<td>@bluesky</td>
+							<td>여성</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>조</td>
+							<td>성규</td>
+							<td>@Joseph</td>
+							<td>남성</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<section id="TableStriped">
+				<h1>Striped rows</h1>
+				<p>
+					홀수번호 라인으로 옅은 배경색으로 영역을 강조합니다.
+				</p>
+				<div class="example">
+					<table class="table table-striped">
+						<thead>
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Last Name</th>
+							<th scope="col">First Name</th>
+							<th scope="col">별명</th>
+							<th scope="col">Sex</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>1</td>
+							<td>최</td>
+							<td>유림</td>
+							<td>@bikiyou</td>
+							<td>여성</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>박</td>
+							<td>하늘</td>
+							<td>@bluesky</td>
+							<td>여성</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>조</td>
+							<td>성규</td>
+							<td>@Joseph</td>
+							<td>남성</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<section id="TableHover">
+				<h1>Hover row</h1>
+				<p>
+					롤오버하는 줄에 옅은 배경색으로 영역을 강조한다.
+				</p>
+				<div class="example">
+					<table class="table table-hover">
+						<thead>
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Last Name</th>
+							<th scope="col">First Name</th>
+							<th scope="col">별명</th>
+							<th scope="col">Sex</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>1</td>
+							<td>최</td>
+							<td>유림</td>
+							<td>@bikiyou</td>
+							<td>여성</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>박</td>
+							<td>하늘</td>
+							<td>@bluesky</td>
+							<td>여성</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>조</td>
+							<td>성규</td>
+							<td>@Joseph</td>
+							<td>남성</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<section id="TableBordered">
+				<h1>Bordered table</h1>
+				<p>
+					롤오버하는 줄에 옅은 배경색으로 영역을 강조한다.
+				</p>
+				<div class="example">
+					<table class="table table-bordered">
+						<thead>
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Last Name</th>
+							<th scope="col">First Name</th>
+							<th scope="col">별명</th>
+							<th scope="col">Sex</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>1</td>
+							<td>최</td>
+							<td>유림</td>
+							<td>@bikiyou</td>
+							<td>여성</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>박</td>
+							<td>하늘</td>
+							<td>@bluesky</td>
+							<td>여성</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<section id="TableCondensed">
+				<h1>Condensed table</h1>
+				<p>
+					...
+				</p>
+				<div class="example">
+					<table class="table table-condensed">
+						<thead>
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Last Name</th>
+							<th scope="col">First Name</th>
+							<th scope="col">별명</th>
+							<th scope="col">Sex</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>1</td>
+							<td>최</td>
+							<td>유림</td>
+							<td>@bikiyou</td>
+							<td>여성</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>박</td>
+							<td>하늘</td>
+							<td>@bluesky</td>
+							<td>여성</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<section id="TableAlign">
+				<h1>Align text from table</h1>
+				<p>
+					...
+				</p>
+				<div class="example">
+					<table class="table table-bordered">
+						<thead>
+						<tr>
+							<th scope="col" class="text-center">#</th>
+							<th scope="col">Last Name</th>
+							<th scope="col">First Name</th>
+							<th scope="col" class="text-right">별명</th>
+							<th scope="col" class="text-right">Sex</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td class="text-center">1</td>
+							<td>최</td>
+							<td>유림</td>
+							<td class="text-right">@bikiyou</td>
+							<td class="text-right">여성</td>
+						</tr>
+						<tr>
+							<td class="text-center">2</td>
+							<td>박</td>
+							<td>하늘</td>
+							<td class="text-right">@bluesky</td>
+							<td class="text-right">여성</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<section id="TableContextClassColor">
+				<h1>Context class color</h1>
+				<p>
+					...
+				</p>
+				<div class="example">
+					<table class="table">
+						<thead>
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Last Name</th>
+							<th scope="col">First Name</th>
+							<th scope="col">별명</th>
+							<th scope="col">Sex</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr class="primary">
+							<td>1</td>
+							<td>최</td>
+							<td>유림</td>
+							<td>@bikiyou</td>
+							<td>여성</td>
+						</tr>
+						<tr class="success">
+							<td>2</td>
+							<td>박</td>
+							<td>하늘</td>
+							<td>@bluesky</td>
+							<td>여성</td>
+						</tr>
+						<tr class="warning">
+							<td>1</td>
+							<td>최</td>
+							<td>유림</td>
+							<td>@bikiyou</td>
+							<td>여성</td>
+						</tr>
+						<tr class="danger">
+							<td>2</td>
+							<td>박</td>
+							<td>하늘</td>
+							<td>@bluesky</td>
+							<td>여성</td>
+						</tr>
+						<tr class="info">
+							<td>1</td>
+							<td>최</td>
+							<td>유림</td>
+							<td>@bikiyou</td>
+							<td>여성</td>
+						</tr>
+						<tr class="dead">
+							<td>2</td>
+							<td>박</td>
+							<td>하늘</td>
+							<td>@bluesky</td>
+							<td>여성</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<section id="TableResponsive">
+				<h1>Responsive</h1>
+				<p>
+					...
+				</p>
+				<div class="example">
+					<div class="table-responsive">
+						<table class="table">
+							<thead>
+							<tr>
+								<th scope="col">#</th>
+								<th scope="col">Last Name</th>
+								<th scope="col">First Name</th>
+								<th scope="col">별명</th>
+								<th scope="col">Sex</th>
+								<th scope="col" class="text-right">모금액</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>1</td>
+								<td>최</td>
+								<td>유림</td>
+								<td>@bikiyou</td>
+								<td>여성</td>
+								<td class="text-right">10,000,000원</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>박</td>
+								<td>하늘</td>
+								<td>@bluesky</td>
+								<td>여성</td>
+								<td class="text-right">200,300,000원</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
 			</section>
 		</section>
 		<!-- // Table -->
+
+
+		<!-- Form -->
+		<section id="Form">
+			<h1>Form</h1>
+			<p>
+				...
+			</p>
+
+			<section id="FormBasic">
+				<h1>Basic</h1>
+				<p>
+					기본적인 폼 요소 스타일입니다.
+				</p>
+				<div class="example">
+					<h4>input[type=text]</h4>
+					<div>
+						<input type="text" class="form-basic" size="15" placeholder="Enter text"/>
+						<input type="password" class="form-basic" size="15" placeholder="Password"/>
+					</div>
+					<h4>textarea</h4>
+					<div>
+						<textarea class="form-basic">text body</textarea>
+					</div>
+					<h4>select</h4>
+					<div>
+						<select class="form-basic">
+							<option>apple</option>
+							<option>banana</option>
+							<option>mango</option>
+						</select>
+					</div>
+				</div>
+			</section>
+
+			<section id="FormBlock">
+				<h1>Block</h1>
+				<p>
+					블럭형식의 폼을 만듭니다.
+				</p>
+				<div class="example">
+					<h4>input[type=text]</h4>
+					<p>
+						<input type="text" class="form-basic block" size="15" placeholder="Enter text"/>
+					</p>
+					<h4>select</h4>
+					<p>
+						<select multiple class="form-basic block">
+							<option>apple</option>
+							<option>banana</option>
+							<option>mango</option>
+							<option>tomato</option>
+							<option>apple</option>
+							<option>banana</option>
+						</select>
+					</p>
+				</div>
+			</section>
+
+			<section id="FormState">
+				<h1>Input state</h1>
+				<p>
+					폼의 상태를 표시합니다.
+				</p>
+				<div class="example">
+					<fieldset class="form-inline">
+						<label class="form-group">
+							<strong>disabled</strong>
+							<input type="text" class="form-basic" size="15" placeholder="Enter text" disabled/>
+						</label>
+						<label class="form-group">
+							<strong>readonly</strong>
+							<input type="text" class="form-basic" size="15" placeholder="Enter text" readonly/>
+						</label>
+					</fieldset>
+				</div>
+			</section>
+
+			<section id="FormGroup">
+				<h1>Form group</h1>
+				<p>
+					레이블 텍스트와 폼의 조합으로 사용합니다.<br/>
+					항목 도움말 글을 추가할 수 있습니다.
+				</p>
+				<div class="example">
+					<h4>inline</h4>
+					<fieldset class="form-inline">
+						<label class="form-group">
+							<strong>label name</strong>
+							<input type="text" class="form-basic" size="15" placeholder="Enter text"/>
+							<span class="help-text">help message</span>
+						</label>
+						<label class="form-group">
+							<strong>label name</strong>
+							<input type="text" class="form-basic" size="15" placeholder="Enter text"/>
+							<button type="button">Button</button>
+						</label>
+					</fieldset>
+					<hr>
+					<h4>block</h4>
+					<fieldset class="form-block">
+						<div class="form-group">
+							<label for="label1"><b>label name</b></label>
+							<input type="text" id="label1" class="form-basic" placeholder="Enter text"/>
+						</div>
+						<div class="form-group">
+							<label for="label2"><b>label name</b></label>
+							<input type="text" id="label2" class="form-basic block" placeholder="Enter text"/>
+							<p class="help-text">Help message</p>
+						</div>
+					</fieldset>
+				</div>
+			</section>
+
+			<section id="FormCheckboxAndRadio">
+				<h1>Checkboxes and radios</h1>
+				<p>
+					체크박스와 라디오 버튼의 조합입니다.
+				</p>
+
+				<div class="example">
+					<div class="form-check">
+						<p>
+							<label>
+								<input type="checkbox" name="value1">
+								<span>동무란 한낱 괴로운 존재요,</span>
+							</label>
+						</p>
+						<p class="disabled">
+							<label>
+								<input type="checkbox" name="value1" disabled>
+								<span>동무란 한낱 괴로운 존재요,</span>
+							</label>
+						</p>
+						<p>
+							<label>
+								<input type="radio" name="value1">
+								<span>동무란 한낱 괴로운 존재요,</span>
+							</label>
+						</p>
+					</div>
+					<hr>
+					<div class="form-check block">
+						<p>
+							<label>
+								<input type="checkbox" name="value1">
+								<span>동무란 한낱 괴로운 존재요,</span>
+							</label>
+						</p>
+						<p>
+							<label>
+								<input type="checkbox" name="value1">
+								<span>동무란 한낱 괴로운 존재요,</span>
+							</label>
+						</p>
+						<p>
+							<label>
+								<input type="radio" name="value1">
+								<span>동무란 한낱 괴로운 존재요,</span>
+							</label>
+						</p>
+						<p class="disabled">
+							<label>
+								<input type="radio" name="value1" disabled>
+								<span>동무란 한낱 괴로운 존재요,</span>
+							</label>
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="FormHorizontal">
+				<h1>Horizontal group</h1>
+				<p>
+					...
+				</p>
+				<div class="example">
+					<fieldset class="form-horizontal">
+						<div class="form-group">
+							<label for="label3" class="label col-md-2 text-right"><b>State</b></label>
+							<div class="col-md-10">
+								<span class="form-static-text">Silver member</span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="label3" class="label col-md-2 text-right"><b>E-mail</b></label>
+							<div class="col-md-10">
+								<input type="email" class="form-basic" id="label3" placeholder="E-mail" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="label4" class="label col-md-2 text-right"><b>Password</b></label>
+							<div class="col-md-10">
+								<input type="password" class="form-basic" id="label4" placeholder="Password" />
+								<p class="help-text">비밀번호를 입력해주세요.</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-offset-2 col-md-10">
+								<div class="form-check not-margin">
+									<p>
+										<label>
+											<input type="checkbox" name="value4">
+											<span>Remember</span>
+										</label>
+									</p>
+								</div>
+								<nav>
+									<p>
+										<button type="button">로그인</button>
+									</p>
+								</nav>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+			</section>
+
+			<section id="FormStateColor">
+				<h1>State color</h1>
+				<p>
+					폼의 색깔로 상태를 나타낼 수 있습니다.<br/>
+					<b>success</b>, <b>warning</b>, <b>danger</b> 3가지 타입으로 색상을 지정할 수 있습니다.
+				</p>
+				<div class="example">
+					<h5>Success</h5>
+					<p><input type="text" class="form-basic block success" placeholder="Enter text"/></p>
+					<h5>Warning</h5>
+					<p><input type="text" class="form-basic block warning" placeholder="Enter text"/></p>
+					<h5>Danger</h5>
+					<p><input type="text" class="form-basic block danger" placeholder="Enter text"/></p>
+				</div>
+			</section>
+
+			<section id="FormSize">
+				<h1>Size</h1>
+				<p>
+					<code>&lt;input /></code>, <code>&lt;textarea /></code>, <code>&lt;select /></code> 엘리먼트의 사이즈를 변경 할 수 있습니다.<br/>
+					<b>large</b>, <b>default</b>, <b>small</b> 3가지 사이즈로 지정할 수 있습니다.
+				</p>
+				<div class="example">
+					<h5>Large</h5>
+					<p>
+						<input type="text" class="form-basic form-lg" placeholder="input large"/>
+						<select class="form-basic form-lg">
+							<option>select large</option>
+						</select>
+					</p>
+					<p>
+						<textarea class="form-basic block form-lg" placeholder="input large"></textarea>
+					</p>
+					<h5>Medium</h5>
+					<p>
+						<input type="text" class="form-basic" placeholder="input default"/>
+						<select class="form-basic">
+							<option>select default</option>
+						</select>
+					</p>
+					<p>
+						<textarea class="form-basic block" placeholder="input default"></textarea>
+					</p>
+					<h5>Small</h5>
+					<p>
+						<input type="text" class="form-basic form-sm" placeholder="input small"/>
+						<select class="form-basic form-sm">
+							<option>select small</option>
+						</select>
+					</p>
+					<p>
+						<textarea class="form-basic block form-sm" placeholder="input form-sm"></textarea>
+					</p>
+				</div>
+			</section>
+		</section>
+		<!-- // Form -->
+
+
+		<!-- Button -->
+		<section id="Button">
+			<h1>Button</h1>
+			<p>
+				...
+			</p>
+			<section id="ButtonBasic">
+				<h1>basic</h1>
+				<div class="example">
+					<p>
+						<a href="#" class="btn">Link</a>
+						<button type="button" class="btn">Button</button>
+						<input type="button" value="Input" class="btn" />
+						<input type="submit" value="Submit" class="btn" />
+					</p>
+				</div>
+			</section>
+
+			<section id="ButtonState">
+				<h1>State</h1>
+				<p>
+					버튼의 상태를 나타냅니다.
+				</p>
+				<div class="example">
+					<h5>Active</h5>
+					<p>버튼을 누른상태의 모습</p>
+					<p>
+						<a href="#" class="btn active">Link</a>
+						<button type="button" class="btn active">Button</button>
+						<input type="button" value="Input" class="btn active" />
+						<input type="submit" value="Submit" class="btn active" />
+					</p>
+					<h5>disabled</h5>
+					<p>비활성 버튼의 모습</p>
+					<p>
+						<a href="#" class="btn disabled">Link</a>
+						<button type="button" class="btn" disabled>Button</button>
+						<input type="button" value="Input" class="btn" disabled />
+						<input type="submit" value="Submit" class="btn" disabled />
+					</p>
+				</div>
+			</section>
+
+			<section id="ButtonColor">
+				<h1>Color</h1>
+				<p>
+					버튼의 상태에 따라 색을 지정할 수 있습니다.
+				</p>
+				<div class="example">
+					<p>
+						<button type="button" class="btn">Default</button>
+						<button type="button" class="btn primary">Primary</button>
+						<button type="button" class="btn success">Success</button>
+						<button type="button" class="btn info">Info</button>
+						<button type="button" class="btn warning">Warning</button>
+						<button type="button" class="btn danger">Danger</button>
+						<button type="button" class="btn dead">Dead</button>
+						<button type="button" class="btn link">Link</button>
+					</p>
+				</div>
+			</section>
+
+			<section id="ButtonSize">
+				<h1>Size</h1>
+				<p>
+					버튼의 사이즈를 지정합니다.
+				</p>
+				<div class="example">
+					<h5>Large size</h5>
+					<p>
+						<input type="text" class="form-basic form-lg" placeholder="Enter text" size="10"/>
+						<button type="button" class="btn primary btn-lg">Large button</button>
+						<button type="button" class="btn btn-lg">Large button</button>
+					</p>
+					<hr class="hide"/>
+					<h5>Default size</h5>
+					<p>
+						<input type="text" class="form-basic" placeholder="Enter text" size="10"/>
+						<button type="button" class="btn primary">Default button</button>
+						<button type="button" class="btn">Default button</button>
+					</p>
+					<hr class="hide"/>
+					<h5>Small size</h5>
+					<p>
+						<input type="text" class="form-basic form-sm" placeholder="Enter text" size="10"/>
+						<button type="button" class="btn primary btn-sm">Small button</button>
+						<button type="button" class="btn btn-sm">Small button</button>
+					</p>
+					<hr class="hide"/>
+					<h5>Extra small size</h5>
+					<p>
+						<button type="button" class="btn primary btn-xs">Extra small button</button>
+						<button type="button" class="btn btn-xs">Extra small button</button>
+					</p>
+				</div>
+
+				<h2>Block</h2>
+				<p>
+					가로 100% 사이즈의 버튼을 만들 수 있습니다.
+				</p>
+				<div class="example">
+					<div class="center-block" style="max-width: 400px;">
+						<p>
+							<button type="button" class="btn block btn-lg primary">Block button</button>
+						</p>
+						<p>
+							<button type="button" class="btn block btn-lg">Block button</button>
+						</p>
+					</div>
+				</div>
+			</section>
+		</section>
+		<!-- // Button -->
+
+
+		<!--Image-->
+		<section id="Image">
+			<h1>Image</h1>
+			<p>
+				이미지에 대한 스타일을 정의합니다.
+			</p>
+
+			<section id="ImageResponsive">
+				<h1>Responsive</h1>
+				<p>
+					스크린 사이즈가 이미지보다 작아졌을때 스크린사이즈에 맞게 같이 축소되도록 합니다.
+				</p>
+				<div class="example">
+					<p>
+						<img src="./assets/images/img-sample-1.png" width="640" class="center-block img-responsive" alt="responsive image">
+					</p>
+				</div>
+			</section>
+
+			<section id="ImageShape">
+				<h1>Shape</h1>
+				<p>
+					이미지의 스타일을 다음 예제와 같이 스타일링을 할 수 있습니다.
+				</p>
+				<div class="example">
+					<p class="text-center">
+						<img src="./assets/images/img-sample-2.png" width="120" class="img-rounded" alt="Rounded image"/>
+						<img src="./assets/images/img-sample-2.png" width="120" class="img-circle" alt="Circle image"/>
+						<img src="./assets/images/img-sample-2.png" width="120" class="img-thumnail" alt="Thumnail image"/>
+					</p>
+				</div>
+			</section>
+		</section>
+		<!--// Image-->
+
+		<section id="Message">
+			<h1>Message</h1>
+			<p>
+				특정 상태에 대한 메세지에 대한 스타일을 정의합니다.
+			</p>
+
+			<section id="MessageColor">
+				<h1>State color</h1>
+				<p>
+					텍스트에 상태 색상을 지정할 수 있습니다.
+				</p>
+				<div class="example">
+					<p class="text-primary">Primary - 우정이란 진정코 위태로운 잔에 떠놓은 물이다.</p>
+					<p class="text-success">Success - 우정이란 진정코 위태로운 잔에 떠놓은 물이다.</p>
+					<p class="text-warning">Warning - 우정이란 진정코 위태로운 잔에 떠놓은 물이다.</p>
+					<p class="text-danger">Danger - 우정이란 진정코 위태로운 잔에 떠놓은 물이다.</p>
+					<p class="text-info">Info - 우정이란 진정코 위태로운 잔에 떠놓은 물이다.</p>
+					<p class="text-dead">Dead - 우정이란 진정코 위태로운 잔에 떠놓은 물이다.</p>
+				</div>
+			</section>
+
+			<section id="MessageBgColor">
+				<h1>State background color</h1>
+				<p>
+					텍스트 상자에 배경색을 지정합니다.
+				</p>
+				<h2>Default color</h2>
+				<div class="example">
+					<p class="bg-primary">Primary - 우정이란 진정코 위태로운 잔에 떠놓은 물이다.</p>
+					<p class="bg-success">Success - 우정이란 진정코 위태로운 잔에 떠놓은 물이다.</p>
+					<p class="bg-warning">Warning - 우정이란 진정코 위태로운 잔에 떠놓은 물이다.</p>
+					<p class="bg-danger">Danger - 우정이란 진정코 위태로운 잔에 떠놓은 물이다.</p>
+					<p class="bg-info">Info - 우정이란 진정코 위태로운 잔에 떠놓은 물이다.</p>
+					<p class="bg-dead">Dead - 우정이란 진정코 위태로운 잔에 떠놓은 물이다.</p>
+				</div>
+				<h2>Blur color</h2>
+				<div class="example">
+					<p class="bg-primary-blur">Primary - 우정이란 진정코 위태로운 잔에 떠놓은 물이다.</p>
+					<p class="bg-success-blur">Success - 우정이란 진정코 위태로운 잔에 떠놓은 물이다.</p>
+					<p class="bg-warning-blur">Warning - 우정이란 진정코 위태로운 잔에 떠놓은 물이다.</p>
+					<p class="bg-danger-blur">Danger - 우정이란 진정코 위태로운 잔에 떠놓은 물이다.</p>
+					<p class="bg-info-blur">Info - 우정이란 진정코 위태로운 잔에 떠놓은 물이다.</p>
+					<p class="bg-dead-blur">Dead - 우정이란 진정코 위태로운 잔에 떠놓은 물이다.</p>
+				</div>
+			</section>
+		</section>
+
+		<section id="ETC">
+			<h1>ETC</h1>
+			<p>
+				...
+			</p>
+
+			<section id="EtcCloseIcon">
+				<h1>Close icon</h1>
+				<p>
+					닫기 버튼을 정의합니다.
+				</p>
+				<div class="example">
+					<p>
+						<button type="button" class="close" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</p>
+				</div>
+			</section>
+
+			<section id="EtcCarets">
+				<h1>Carets</h1>
+				<p>
+					작은 화살표를 만들 수 있습니다. 아래로 향하는 불릿과 위로 향하는 불릿을 표현합니다.
+				</p>
+				<div class="example">
+					<p>
+						<span class="caret down"></span>
+						<span class="caret up"></span>
+					</p>
+				</div>
+			</section>
+
+			<section id="EtcCenterBlock">
+				<h1>Center content block</h1>
+				<p>
+					블록 속성을 가진 엘리먼트는 왼쪽으로 정렬됩니다. 중앙으로 이동할때 사용할 수 있습니다.
+				</p>
+				<div class="example">
+					<p class="center-block bg-info" style="max-width: 400px;">block text</p>
+				</div>
+			</section>
+		</section>
+
+
 	</div>
 </main>
 
@@ -289,4 +1148,3 @@ hljs.configure({ tabReplace : '  ' });
 </script>
 </body>
 </html>
-
