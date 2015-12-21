@@ -89,9 +89,6 @@ caption {
 		> thead > tr > th {
 			border-bottom-width: 2px;
 		}
-		> tbody + tbody > tr > td {
-			border-top-width: 2px;
-		}
 	}
 
 	// Condensed
@@ -130,6 +127,17 @@ caption {
 				> tr {
 					> th, td {
 						white-space: nowrap;
+					}
+				}
+			}
+		}
+		> .table-bordered {
+			border: none;
+			> thead, > tbody, > tfoot {
+				> tr {
+					> th, > td {
+						&:first-child {border-left: none;}
+						&:last-child {border-right: none;}
 					}
 				}
 			}

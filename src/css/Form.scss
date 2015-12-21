@@ -89,6 +89,8 @@ select[size] {
 		font-size: $typo-size-small;
 	}
 }
+
+// Another elements size
 textarea.form-basic {
 	&, &.form-lg, &.form-sm {
 		height: auto;

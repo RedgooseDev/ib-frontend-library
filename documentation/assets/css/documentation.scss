@@ -1,6 +1,6 @@
 main {
 	min-width: 768px;
-	min-width: 200px;
+	//min-width: 320px;
 	max-width: 1280px;
 	margin:0 auto;
 	padding: 0 15px;
@@ -11,12 +11,13 @@ main {
 		margin: 30px 0 100px;
 		> h1 {
 			font-size: 28px;
-			padding: 0 0 15px;
+			padding: 15px 0 15px;
 			border-bottom: 1px solid #ddd;
 		}
 		> section {
-			margin: 30px 0 40px;
+			margin: 15px 0 40px;
 			> h1 {
+				padding-top: 12px;
 				font-size: 22px;
 			}
 			> h2 {
@@ -51,17 +52,40 @@ main {
 		}
 	}
 	.source {
+		position: relative;
 		margin: 20px 0;
+		padding: 0;
 		pre {
 			border: none;
 			background: none;
 			padding: 0;
+			margin: 0;
 			code {
+				margin: 0;
 				padding: 15px 18px;
 				white-space: pre;
 				font-size: 14px;
 				line-height: 1.58;
 			}
+		}
+
+		&:after {
+			position: absolute;
+			z-index: 10;
+			content: 'Source';
+			right:0; top:0;
+			padding: 2px 10px 3px;
+			background: rgba(0,0,0,.5);
+			color: #eee;
+			font-size: 10px;
+			font-weight: bold;
+			font-family: tahoma, sans-serif;
+			text-transform: uppercase;
+			border-style: solid;
+			border-color: #555;
+			border-width: 0 0 1px 1px;
+			border-bottom-left-radius: 4px;
+
 		}
 	}
 
@@ -73,6 +97,25 @@ main {
 			padding: 10px 5px 10px 10px;
 			font-size: 11px;
 			font-family: Arial, sans-serif;
+		}
+	}
+
+
+	.responsive-visible-chart {
+		> thead > tr > th {
+			small {
+				color: #666;
+				font-weight: normal;
+			}
+		}
+		> tbody > tr > td {
+			text-align: center;
+			background: #f5f5f5;
+			color: #999;
+			&.visible {
+				background: #e3e0ea;
+				color: #111;
+			}
 		}
 	}
 }
