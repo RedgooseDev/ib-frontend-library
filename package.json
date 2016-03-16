@@ -1,7 +1,7 @@
 {
-  "name": "ibuilder-lib",
+  "name": "redgoose-fe-framework",
   "version": "1.0.0",
-  "description": "i-builder global library",
+  "description": "Redgoose front-end framework",
   "keywords": [
     "css",
     "library"
