@@ -96,6 +96,10 @@ textarea.form-basic {
 		height: auto;
 	}
 }
+select.form-basic {
+	background: inherit;
+	padding-left: 6px; padding-right: 6px;
+}
 select.form-basic.form-lg {
 	line-height: $size-height-large;
 }

@@ -24,7 +24,7 @@ gulp.task('scss', function(){
 			outputStyle: 'compact'
 			//outputStyle: 'compressed'
 		}).on('error', scss.logError))
-		.pipe(rename('ibuilder-lib.css'))
+		.pipe(rename('rg-lib.css'))
 		.pipe(sourcemaps.write('maps'))
 		.pipe(gulp.dest('dist/css/'));
 });
@@ -53,7 +53,7 @@ gulp.task('scss-doc:watch', function(){
 gulp.task('javascript', function(){
 	gulp.src(source.js)
 			.pipe(sourcemaps.init())
-			.pipe(concat('ibuilder-lib.min.js', { newLine: '\n' }))
+			.pipe(concat('rg-lib.min.js', { newLine: '\n' }))
 			//.pipe(uglify())
 			.pipe(sourcemaps.write('maps'))
 			.pipe(gulp.dest('dist/js/'));

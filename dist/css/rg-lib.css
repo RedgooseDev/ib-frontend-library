@@ -583,6 +583,8 @@ select[multiple], select[size] { height: auto; }
 
 textarea.form-basic, textarea.form-basic.form-lg, textarea.form-basic.form-sm { height: auto; }
 
+select.form-basic { background: inherit; padding-left: 6px; padding-right: 6px; }
+
 select.form-basic.form-lg { line-height: 48px; }
 
 select.form-basic.form-sm { line-height: 28px; }
@@ -763,4 +765,4 @@ button.close:hover { filter: alpha(opacity=100); opacity: 1; }
 
 .blind { position: absolute; overflow: hidden; width: 0; height: 0; visibility: hidden; font-size: 0; line-height: 0; }
 
-/*# sourceMappingURL=maps/ibuilder-lib.css.map */
+/*# sourceMappingURL=maps/rg-lib.css.map */
